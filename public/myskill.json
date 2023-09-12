@@ -1,0 +1,104 @@
+{
+  "result": [
+    {
+      "category": {
+        "title": "Database"
+      },
+      "skills": [
+        "Mysql",
+        "Mongodb"
+      ]
+    },
+    {
+      "category": {
+        "title": "Language"
+      },
+      "skills": [
+        "Java",
+        "Kotlin",
+        "Node.js",
+        "JavaScript",
+        "React",
+        "PHP",
+        "Dart",
+        "CSS3",
+        "HTML5",
+        "GraphQL",
+        "Python3",
+        "Angular",
+        "Typescript"
+      ]
+    },
+    {
+      "category": {
+        "title": "Framework"
+      },
+      "skills": [
+        "AdonisJS",
+        "ExpressJS",
+        "Laravel",
+        "Flutter",
+        "NestJS",
+        "NextJS",
+        "Android"
+      ]
+    },
+    {
+      "category": {
+        "title": "OS"
+      },
+      "skills": [
+        "Ubuntu",
+        "RHEL 8"
+      ]
+    },
+    {
+      "category": {
+        "title": "Web API Services"
+      },
+      "skills": [
+        "RESTful",
+        "GraphQL"
+      ]
+    },
+    {
+      "category": {
+        "title": "Web / Application Servers"
+      },
+      "skills": [
+        "Apache",
+        "Nginx",
+        "Tomcat"
+      ]
+    },
+    {
+      "category": {
+        "title": "CSS Frameworks"
+      },
+      "skills": [
+        "Bootstrap",
+        "Tailwind"
+      ]
+    },
+    {
+      "category": {
+        "title": "Cloud Services"
+      },
+      "skills": [
+        "AWS",
+        "Azure"
+      ]
+    },
+    {
+      "category": {
+        "title": "Other"
+      },
+      "skills": [
+        "Docker", "Microservices", "Kubernetes",
+        "Kafka", "IntelliJ IDEA", "Design Pattern",
+        "Object-Oriented Programming",
+        "Terraform"
+      ]
+    }
+  ]
+}
