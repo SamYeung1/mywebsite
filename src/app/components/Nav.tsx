@@ -1,6 +1,6 @@
 "use client";
 import React, {useState} from "react";
-
+import Link from 'next/link'
 export default function Nav({
                                 children,
                                 menuItems,
@@ -34,9 +34,9 @@ export default function Nav({
             <div className={`${open ? '' : 'hidden'} md:block w-full md:w-auto`}>
                 <ul className={'flex font-medium flex-col md:flex-row'}>
                     {
-                        menuItems.map((item: NavItem, index: number) => (<li key={index}><a
-                            className={'block p-2 md:hover:bg-transparent md:hover:text-secondary md:hover:brightness-200 hover:bg-secondary hover:text-primary transition ease-in-out duration-300 rounded'}
-                            href={item.url}>{item.name}</a></li>))
+                        menuItems.map((item: NavItem, index: number) => (<li key={index}><Link
+                            className={'block p-2 md:hover:bg-transparent md:hover:text-secondary md:hover:brightness-200 hover:bg-secondary hover:text-primary transition duration-300 rounded'}
+                            href={item.url}>{item.name}</Link></li>))
                     }
                 </ul>
             </div>

@@ -27,5 +27,4 @@ body {
   /*  color:theme('colors.secondary');*/
     background-color: theme('colors.primary');
     cursor: default;
-    padding-bottom: 2rem;
 }

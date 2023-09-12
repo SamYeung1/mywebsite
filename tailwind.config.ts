@@ -13,7 +13,8 @@ const config: Config = {
     extend: {
       colors:{
         primary:'#094952',
-        secondary:'#ddf1f8'
+        secondary:'#ddf1f8',
+        footer:'#053338'
       },
       backgroundImage:{
         'banner':"url('/cover.jpg')"

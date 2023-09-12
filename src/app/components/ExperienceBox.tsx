@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "@/app/components/svg/Link";
+import {LinkSVG} from "@/app/components/svg/LinkSVG";
 import {Badge} from "@/app/components/Badge";
 
 export function ExperienceBox({
@@ -16,7 +16,7 @@ export function ExperienceBox({
     return <div className={'flex justify-between'}>
         <span className={'mr-8 w-52 font-light'}>{period}</span>
         <div className={'flex flex-col text-left w-full'}>
-            <a className={'font-bold'} href={'https://www.ey.com/'} target={'_blank'}>{title}<Link/></a>
+            <a className={'font-bold'} href={'https://www.ey.com/'} target={'_blank'}>{title}<LinkSVG/></a>
             <span className={'font-light'}>
                                    {description}
                                 </span>
