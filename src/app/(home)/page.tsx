@@ -1,8 +1,8 @@
 "use client"
 import React, {useEffect, useState} from "react";
-import Section from "@/app/components/Section";
-import {ExperienceBox} from "@/app/components/ExperienceBox";
-import {Badge} from "@/app/components/Badge";
+import Section from "@/app/components/section";
+import {ExperienceBox} from "@/app/components/experience-box";
+import {Badge} from "@/app/components/badge";
 
 export default function HomePage() {
     let [workExperience, setWorkExperience] = useState<Experience[]>([]);
@@ -18,7 +18,8 @@ export default function HomePage() {
             .then((data: APIResponse<Skill[]>) => {
                 setSkills(data.result ?? []);
             });
-    });
+
+    },[]);
     return (
         <div className={'grid grid-cols-1 md:grid-cols-2 gap-4'}>
             <Section title={'About'}>

@@ -16,7 +16,7 @@ export default function Nav({
         setOpen(!open);
     };
     return <nav className={`text-secondary uppercase w-full ${className}`}>
-        <div className={'flex flex-wrap justify-between items-center md:mx-96 p-2 md:py-4'}>
+        <div className={'flex flex-wrap justify-between items-center xl:mx-96 py-4 p-2 '}>
             <div className={'flex items-center text-white p-4'}>
                 <span
                     className={'self-center text-2xl font-semibold whitespace-nowrap'}>Sam Yeung</span>
