@@ -25,8 +25,8 @@ export default function HomePage() {
             <Section title={'About'}>
                 A developer with 4+ years working experience in different projects. Specializing
                 in Node.js and PHP, Backend development and application integration. Capable
-                at all aspects of development from project planning to requirements gathering
-                through to writing and testing code. Excellent Communication collaborating with
+                of all aspects of development from project planning to requirements gathering
+                through to writing and testing code. Excellent Communication and collaboration with
                 team members. Proficient in effectively resolving project risks and issues.
                 Demonstrates an approach to learning and readily embraces new technologies in
                 projects.
