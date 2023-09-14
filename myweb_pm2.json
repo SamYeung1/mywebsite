@@ -1,0 +1,15 @@
+{
+	"apps":[
+		{
+			"name":"myweb",
+			"args": "start",
+			"script":"node_modules/next/dist/bin/next",
+			"env":{
+				"NODE_ENV":"production"
+			},
+      "ignore_watch": [
+        "node_modules"
+      ]
+  	}
+	]
+}
