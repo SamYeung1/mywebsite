@@ -47,7 +47,7 @@ export default function HomePage() {
                                 <span className={'text-sm font-bold'}>{skill.category.title}</span>
                                 <div className={'flex gap-2 flex-wrap my-2'}>
                                     {skill.skills.map((title: string, skill_item_index: number) => (
-                                        <Badge key={`skill_item_${skill_item_index}`} title={title}/>))}
+                                        <Badge key={`skill-item_${skill_item_index}`} title={title}/>))}
                                 </div>
                             </div>
                         )
