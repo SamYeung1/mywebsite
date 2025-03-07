@@ -2,15 +2,15 @@
   "result": [
     {
       "title": "Senior Software Developer . Ernst & Young Mtel, Hong Kong",
-      "date": "Oct 2022 - Present",
+      "date": "Oct 2022 - Feb 2025",
       "skills": [],
-      "description": ""
+      "description": "Achieved seamless functionality across projects by developing backend solutions and conducting thorough code reviews utilizing NodeJS frameworks. Architect scalable APIs, streamlining development processes and enhancing project efficiency."
     },
     {
       "title": "Software Developer . Ernst & Young Mtel, Hong Kong",
-      "date": "Sep 2018 - Oct 2022",
-      "skills": ["Node.JS", "PHP", "HTML", "Jquery", "Javascript", "Java", "Python", "CSS3"],
-      "description": "Designed, developed, tested, and maintained mobile and web applications. Focused primarily on backend development for various projects. Occasionally contributed to frontend development, including CMS or Web Portal implementation."
+      "date": "Aug 2018 - Oct 2022",
+      "skills": ["Node.JS", "PHP", "HTML", "Jquery", "Javascript","Typescript", "Java","Kotlin", "Python", "CSS","GraphQL","MySQL","MongoDB"],
+      "description": "Delivered robust backend solutions for projects, employing Node.js frameworks to drive project success. Developed and implemented CMS and web portal projects, utilizing JavaScript, jQuery, and HTML for frontend development to enhance user experience and engagement."
     }
   ]
 }

@@ -23,13 +23,7 @@ export default function HomePage() {
     return (
         <div className={'grid grid-cols-1 md:grid-cols-2 gap-4'}>
             <Section title={'About'}>
-                A developer with 4+ years working experience in different projects. Specializing
-                in Node.js and PHP, Backend development and application integration. Capable
-                of all aspects of development from project planning to requirements gathering
-                through to writing and testing code. Excellent Communication and collaboration with
-                team members. Proficient in effectively resolving project risks and issues.
-                Demonstrates an approach to learning and readily embraces new technologies in
-                projects.
+                Experienced software developer with over 5 years of hands-on expertise in software development. Proficient in modern programming languages and frameworks, with a strong focus on Node.js, PHP, and TypeScript. Skilled in designing robust API structures, optimizing database performance, and delivering innovative, scalable solutions that enhance operational efficiency.
             </Section>
             <Section title={'Work Experience'}>
 
