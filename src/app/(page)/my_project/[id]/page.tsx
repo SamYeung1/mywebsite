@@ -64,7 +64,7 @@ function Section({image, title, content, bannerRight}: {
     return <motion.div ref={ref} initial={'initial'} animate={control} variants={contentVariants}>
         <div
             className={`py-3 flex ${bannerRight ? 'md:flex-row-reverse' : 'md:flex-row'} flex-col m-5 items-center gap-4`}>
-            <img className={'rounded'} src={image}/>
+            <img alt={title} className={'rounded'} src={image}/>
             <div className={'flex flex-col w-full'}>
                 <label className={'text-2xl font-bold'}>{title}</label>
                 <label className={'font-normal'}>{content}</label>
