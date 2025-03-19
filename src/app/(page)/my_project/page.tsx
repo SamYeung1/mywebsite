@@ -31,9 +31,8 @@ export default function MyProjectPage() {
     return <div className={'grid grid-cols-1 md:grid-cols-3 gap-4'}>
         {
             productItems.map((card: CardItem, index: number) => (
-                <motion.div variants={cardVariants}>
+                <motion.div variants={cardVariants} key={`production-card_${index}`}>
                     <Link shallow={false} scroll={false} href={`my_project/${card.id}`}><ProductCard
-                        key={`production-card_${index}`}
                         cardItem={card}/></Link>
                 </motion.div>))
         }
