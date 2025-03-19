@@ -1,0 +1,38 @@
+{
+  "result": [
+    {
+      "id": "1",
+      "icon": "/wherever_app/4.jpg",
+      "description": "A location-based social interaction platform designed to share updates, interact with posts, and explore nearby places. The app integrates Google Maps and offers a smooth and user-friendly experience.",
+      "title": "Wherever App",
+      "createdAt": "2022-10-03T00:00:00+00:00",
+      "contentItems": [
+        {
+          "icon": "/wherever_app/4.jpg",
+          "title": "Map Integration",
+          "description": "Explore nearby places and interact with content via Google Maps. View your location and tagged posts directly on the map"
+        },
+        {
+          "icon": "/wherever_app/3.jpg",
+          "title": "Search and Filter",
+          "description": "Filter posts by date range or distance (from 2,000m to 10,000m). Customize your search criteria easily with a slider."
+        },
+        {
+          "icon": "/wherever_app/1.jpg",
+          "title": "Post Creation and Interaction",
+          "description": "Create posts with timestamps, comments, and location tags. Like and comment on posts to engage with others. Google Maps integration for tagging and visualizing locations."
+        },
+        {
+          "icon": "/wherever_app/2.jpg",
+          "title": "User Profile",
+          "description": "Personalize your profile with a display name, account ID, and About Me section. Upload profile pictures and manage your gallery and favorites.'"
+        },
+        {
+          "icon": "/wherever_app/5.jpg",
+          "title": "Notifications",
+          "description": "A dedicated inbox displays activity notifications (e.g., \"liked image\"). Notifications are sorted chronologically and include timestamps."
+        }
+      ]
+    }
+  ]
+}
