@@ -1,4 +1,11 @@
 export declare global {
+
+    interface ContentItem {
+        icon: string,
+        title: string,
+        description: string
+    }
+
     interface NavItem {
         url: string,
         icon?: string,
@@ -9,7 +16,9 @@ export declare global {
         id: string
         title: string,
         icon: string,
-        description: string
+        description: string,
+        contentItems: ContentItem[],
+        createdAt: Date
     }
 
     interface Experience {
