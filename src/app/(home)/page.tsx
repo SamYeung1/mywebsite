@@ -1,25 +1,13 @@
-"use client"
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Section from "@/app/components/section";
 import {ExperienceBox} from "@/app/components/experience-box";
 import {Badge} from "@/app/components/badge";
+import WorkExperienceJson from "@/json/work.json";
+import SkillJson from "@/json/myskill.json";
 
 export default function HomePage() {
-    let [workExperience, setWorkExperience] = useState<Experience[]>([]);
-    let [skills, setSkills] = useState<Skill[]>([]);
-    useEffect(() => {
-        fetch('/work.json')
-            .then((res) => res.json())
-            .then((data: APIResponse<Experience[]>) => {
-                setWorkExperience(data.result ?? []);
-            });
-        fetch('/myskill.json')
-            .then((res) => res.json())
-            .then((data: APIResponse<Skill[]>) => {
-                setSkills(data.result ?? []);
-            });
-
-    },[]);
+    const workExperience:Experience[] = WorkExperienceJson.result;
+    const skills:Skill[] = SkillJson.result;
     return (
         <div className={'grid grid-cols-1 md:grid-cols-2 gap-4'}>
             <Section title={'About'}>
