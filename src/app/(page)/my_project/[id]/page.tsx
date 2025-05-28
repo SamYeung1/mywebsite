@@ -26,16 +26,15 @@ export default function ProjectDetailPage({params}: { params: { id: string } }) 
         <div className={'flex flex-col'}>
             <div className={'flex flex-row justify-between'}>
                 <label
-                    className={'text-primary text-2xl font-bold uppercase'}>{productItem?.title}
+                    className={'text-primary text-3xl font-bold uppercase'}>{productItem?.title}
                 </label>
                 <div className={'flex flex-row'}>
-                    <label className={'font-normal text-gray-400'}><PencilSvg/></label>
                     <label
-                        className={'font-normal text-gray-400'}>{moment(productItem?.createdAt).format('Do MMMM YYYY')}</label>
+                        className={'font-normal text-[13px] text-gray-400'}>{moment(productItem?.createdAt).format('Do MMMM YYYY')}</label>
                 </div>
             </div>
             <hr className={'my-2'}/>
-            <label className={'font-normal text-primary'}>{productItem?.description}</label>
+            <label className={'font-normal text-xl text-primary'}>{productItem?.description}</label>
         </div>
         {
             productItem?.contentItems?.map((item: ContentItem, index) => (
@@ -67,7 +66,7 @@ function Section({image, title, content, bannerRight}: {
             <img alt={title} className={'rounded'} src={image}/>
             <div className={'flex flex-col w-full'}>
                 <label className={'text-2xl font-bold'}>{title}</label>
-                <label className={'font-normal'}>{content}</label>
+                <label className={'font-light text-2xl'}>{content}</label>
             </div>
         </div>
     </motion.div>
