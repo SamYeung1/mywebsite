@@ -4,25 +4,21 @@ import {Badge} from "@/app/components/badge";
 
 export function ExperienceBox({
                                   title,
-                                  period,
+                                  date,
                                   description,
-                                  skills
-                              }: {
-    title: string,
-    period: string,
-    description: string,
-    skills: string[]
-}) {
+                                  skills,
+                                  url
+                              }: Experience) {
     return <div className={'flex justify-between'}>
-        <span className={'mr-8 w-52 font-light'}>{period}</span>
+        <span className={'mr-8 w-52 font-light'}>{date}</span>
         <div className={'flex flex-col text-left w-full'}>
-            <a className={'font-bold'} href={'https://www.ey.com/'} target={'_blank'}>{title}<LinkSvg/></a>
+            <a className={'font-bold'} href={url} target={'_blank'}>{title}<LinkSvg/></a>
             <span className={'font-light'}>
                                    {description}
                                 </span>
             <div className={'py-4 flex flex-wrap gap-2'}>
                 {skills.map((skill: string, index: number) => (
-                    <Badge key={index} title={skill}/>))}
+                    <Badge key={`skill_${index}`} title={skill}/>))}
             </div>
         </div>
     </div>

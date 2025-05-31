@@ -25,7 +25,8 @@ export declare global {
         title: string,
         date: string,
         description: string,
-        skills: string[]
+        skills: string[],
+        url: string
     }
 
     interface Skill {

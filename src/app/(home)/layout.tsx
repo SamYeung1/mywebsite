@@ -17,10 +17,7 @@ export default function Layout({
 }) {
     return (
         <>
-            <Header showBanner={true}/>
-            <div className={'container my-4'}>
-                <div className={'p-8 bg-white shadow-sm rounded-lg text-primary'}>{children}</div>
-            </div>
+            {children}
         </>
     )
 }
