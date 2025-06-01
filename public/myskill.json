@@ -14,8 +14,6 @@
         "title": "Language"
       },
       "skills": [
-        "Java",
-        "Kotlin",
         "Node.js",
         "JavaScript",
         "React",
@@ -26,7 +24,9 @@
         "GraphQL",
         "Python3",
         "Angular",
-        "Typescript"
+        "Typescript",
+        "Java",
+        "Kotlin"
       ]
     },
     {
@@ -94,10 +94,15 @@
         "title": "Other"
       },
       "skills": [
-        "Docker", "Microservices", "Kubernetes",
-        "Kafka", "IntelliJ IDEA", "Design Pattern",
+        "Docker",
+        "Microservices",
+        "Kubernetes",
+        "Kafka",
+        "IntelliJ IDEA",
+        "Design Pattern",
         "Object-Oriented Programming",
-        "Terraform"
+        "Terraform",
+        "ElasticSearch"
       ]
     }
   ]

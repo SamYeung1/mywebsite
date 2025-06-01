@@ -46,33 +46,50 @@ export default function HomePage() {
                 <div className={"flex-1"}></div>
             </div>
         </div>
-        <div className={"w-screen md:p-24 p-8 md:grid md:grid-cols-2 bg-white text-gray-800 gap-4"} ref={sectionContent}>
-            <AnimatedDiv className={"mb-8"}>
-                <h1 className={"section-title mb-8 text-secondary"}>About Me</h1>
-                <p className={"text-xs md:text-lg"}>Detail-oriented and analytical Software Developer with extensive
-                    experience in designing and implementing scalable, robust, and
-                    efficient backend systems. Proficient in backend development with an understanding of front-end
-                    technologies. Expertise in developing
-                    robust and scalable applications using cutting-edge technologies as well as troubleshooting,
-                    debugging, and optimising code for
-                    maximum performance. Ability to analyse end-user needs and tailor solutions to enhance system
-                    functionality. Committed to staying
-                    updated with the latest technologies and best practices in software development to deliver
-                    innovative solutions. Eager to leverage solid
-                    technical acumen and a collaborative mindset in contributing to dynamic development teams.</p>
+        <div className={"w-screen md:p-24 p-8 bg-white text-gray-800"} ref={sectionContent}>
+            <AnimatedDiv className={"md:grid md:grid-cols-2 gap-4"}>
+                <div className={"mb-8"}>
+                    <h1 className={"section-title mb-8 text-secondary"}>About Me</h1>
+                    <p>Detail-oriented and analytical Software Developer with extensive
+                        experience in designing and implementing scalable, robust, and
+                        efficient backend systems. Proficient in backend development with an understanding of front-end
+                        technologies. Expertise in developing
+                        robust and scalable applications using cutting-edge technologies as well as troubleshooting,
+                        debugging, and optimising code for
+                        maximum performance. Ability to analyse end-user needs and tailor solutions to enhance system
+                        functionality. Committed to staying
+                        updated with the latest technologies and best practices in software development to deliver
+                        innovative solutions. Eager to leverage solid
+                        technical acumen and a collaborative mindset in contributing to dynamic development teams.</p>
+                </div>
+                <div className={"mb-8"}>
+                    <h1 className={"section-title mb-8 text-secondary"}>Work Experience</h1>
+                    <div>
+                        {workExperience.map((workExperience, index) => (
+                            <ExperienceBox
+                                key={`workExperience_${index}`}
+                                title={workExperience.title}
+                                date={workExperience.date}
+                                description={workExperience.description}
+                                skills={workExperience.skills}
+                                url={workExperience.url}/>))
+                        }
+                    </div>
+                </div>
             </AnimatedDiv>
-            <AnimatedDiv className={"mb-8"}>
-                <h1 className={"section-title mb-8 text-secondary"}>Work Experience</h1>
+            <AnimatedDiv className={"mb-8 col-span-2"}>
+                <h1 className={"section-title mb-8 text-secondary"}>My Skills</h1>
                 <div>
-                    {workExperience.map((workExperience,index) => (
-                        <ExperienceBox
-                            key={`workExperience_${index}`}
-                            title={workExperience.title}
-                            date={workExperience.date}
-                            description={workExperience.description}
-                            skills={workExperience.skills}
-                            url={workExperience.url}/>))
-                    }
+                    {skills.map((skill: Skill, skill_index: number) => (
+                            <div key={`skill_${skill_index}`}>
+                                <span className={'text-sm font-bold'}>{skill.category.title}</span>
+                                <div className={'flex gap-2 flex-wrap my-2'}>
+                                    {skill.skills.map((title: string, skill_item_index: number) => (
+                                        <Badge key={`skill_item_${skill_item_index}`} title={title}/>))}
+                                </div>
+                            </div>
+                        )
+                    )}
                 </div>
             </AnimatedDiv>
         </div>
