@@ -5,8 +5,15 @@ import {ExperienceBox} from "@/app/components/experience-box";
 import {Badge} from "@/app/components/badge";
 import SkillJson from "../../../public/myskill.json";
 import AnimatedDiv from "@/app/components/animated-div";
+import {motion, Variants} from "framer-motion";
+import LinkedinSvg from "@/app/components/svg/linkedin-svg";
+import {GithubMark} from "@/app/components/svg/github-mark";
 
 export default function HomePage() {
+    const experienceBoxAnimationVariants: Variants = {
+        initial: {y: -100, opacity: 0},
+        visible: {y: 1, opacity: 1,transition:{delay:0.5}},
+    };
     const sectionContent = useRef<HTMLDivElement>(null);
     const handleScroll = () => {
         sectionContent.current?.scrollIntoView({behavior: "smooth"});
@@ -25,7 +32,7 @@ export default function HomePage() {
                 setSkills(data.result ?? []);
             });
 
-    },[]);
+    }, []);
     return <>
         <div
             className={"h-screen w-screen text-white bg-[url(/cover.jpg)] bg-cover bg-center bg-fixed flex items-center"}>
@@ -41,7 +48,19 @@ export default function HomePage() {
                         optimizing
                         database performance, and delivering innovative, scalable solutions that enhance operational
                         efficiency.</p>
-                    <button className={"btn-primary"} onClick={handleScroll}>View More</button>
+                    <div className={"flex flex-col md:flex-row items-center md:justify-start gap-4"}>
+                        <button className={"btn-primary"} onClick={handleScroll}>View More</button>
+                        <div className={"grid grid-cols-2 gap-2"}>
+                            <a
+                                className={'hover:opacity-100 opacity-70 transition duration-300 inline-block'}
+                                target={"_blank"}
+                                href={'https://www.linkedin.com/in/chun-sing-yeung-0626531a0'}><LinkedinSvg/></a>
+                            <a
+                                className={'hover:opacity-100 opacity-70 transition duration-300 inline-block'}
+                                target={"_blank"}
+                                href={'https://github.com/SamYeung1'}><GithubMark/></a>
+                        </div>
+                    </div>
                 </AnimatedDiv>
                 <div className={"flex-1"}></div>
             </div>
@@ -66,13 +85,14 @@ export default function HomePage() {
                     <h1 className={"section-title mb-8 text-secondary"}>Work Experience</h1>
                     <div>
                         {workExperience.map((workExperience, index) => (
-                            <ExperienceBox
-                                key={`workExperience_${index}`}
-                                title={workExperience.title}
-                                date={workExperience.date}
-                                description={workExperience.description}
-                                skills={workExperience.skills}
-                                url={workExperience.url}/>))
+                            <motion.div key={`workExperience_${index}`} variants={experienceBoxAnimationVariants} initial={"initial"} whileInView={"visible"}>
+                                <ExperienceBox
+                                    title={workExperience.title}
+                                    date={workExperience.date}
+                                    description={workExperience.description}
+                                    skills={workExperience.skills}
+                                    url={workExperience.url}/>
+                            </motion.div>))
                         }
                     </div>
                 </div>

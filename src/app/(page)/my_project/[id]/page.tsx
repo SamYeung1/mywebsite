@@ -2,7 +2,7 @@
 import {AnimationControls, motion, useAnimation, useInView, Variants} from 'framer-motion';
 import React, {LegacyRef, ReactNode, RefObject, useEffect, useRef, useState} from "react";
 import moment from "moment";
-import {PencilSvg} from "@/app/components/svg/pencil";
+import PencilSvg from "@/app/components/svg/pencil";
 
 const contentVariants: Variants = {
     initial: {scale: 0.96, opacity: 0},

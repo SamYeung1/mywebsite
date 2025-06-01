@@ -2,7 +2,7 @@ import {Variants, motion} from "framer-motion";
 import React, {HTMLAttributes} from "react";
 
 const variants: Variants = {
-    hidden: {opacity: 0, y: 50, scale: 0.95},
+    initial: {opacity: 0, y: 50, scale: 0.95},
     visible: {
         opacity: 1,
         y: 0,
@@ -11,7 +11,7 @@ const variants: Variants = {
     },
 };
 export default function AnimatedDiv(props: React.PropsWithChildren & HTMLAttributes<HTMLDivElement>) {
-    return <motion.div variants={variants} initial={"hidden"} whileInView={"visible"} className={props.className}>
+    return <motion.div variants={variants} initial={"initial"} whileInView={"visible"} className={props.className}>
         {props.children}
     </motion.div>
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {LinkSvg} from "@/app/components/svg/link-svg";
+import LinkSvg from "@/app/components/svg/link-svg";
 import {Badge} from "@/app/components/badge";
 
 export function ExperienceBox({
