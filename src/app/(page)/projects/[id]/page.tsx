@@ -23,6 +23,7 @@ export default function ProjectDetailPage({params}: { params: { id: string } }) 
             });
     }, []);
     return productItem ? <div>
+        <motion.div layoutId={`project_motion_${params.id}`}><img className={"h-64"} src={productItem.icon}/></motion.div>
         <div className={'flex flex-col'}>
             <div className={'flex flex-row justify-between'}>
                 <label

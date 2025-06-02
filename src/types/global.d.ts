@@ -39,5 +39,8 @@ export declare global {
     interface APIResponse<T> {
         result: T
     }
-
+    type ImageItemProp = {
+        imageUrl: string;
+        title: string;
+    }
 }

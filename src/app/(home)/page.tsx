@@ -3,16 +3,17 @@ import React, {useEffect, useRef, useState} from "react";
 import Section from "@/app/components/section";
 import {ExperienceBox} from "@/app/components/experience-box";
 import {Badge} from "@/app/components/badge";
-import SkillJson from "../../../public/myskill.json";
 import AnimatedDiv from "@/app/components/animated-div";
 import {motion, Variants} from "framer-motion";
 import LinkedinSvg from "@/app/components/svg/linkedin-svg";
 import {GithubMark} from "@/app/components/svg/github-mark";
+import ImageItem from "@/app/components/image-item";
+import Link from "next/link";
 
 export default function HomePage() {
     const experienceBoxAnimationVariants: Variants = {
         initial: {y: -100, opacity: 0},
-        visible: {y: 1, opacity: 1,transition:{delay:0.5}},
+        visible: {y: 1, opacity: 1, transition: {delay: 0.5}},
     };
     const sectionContent = useRef<HTMLDivElement>(null);
     const handleScroll = () => {
@@ -20,6 +21,7 @@ export default function HomePage() {
     }
     let [workExperience, setWorkExperience] = useState<Experience[]>([]);
     let [skills, setSkills] = useState<Skill[]>([]);
+    let [projects, setProjects] = useState<CardItem[]>([]);
     useEffect(() => {
         fetch('/work.json')
             .then((res) => res.json())
@@ -30,6 +32,11 @@ export default function HomePage() {
             .then((res) => res.json())
             .then((data: APIResponse<Skill[]>) => {
                 setSkills(data.result ?? []);
+            });
+        fetch('/project.json')
+            .then((res) => res.json())
+            .then((data: APIResponse<CardItem[]>) => {
+                setProjects(data.result ?? []);
             });
 
     }, []);
@@ -67,39 +74,38 @@ export default function HomePage() {
         </div>
         <div className={"w-screen md:p-24 p-8 bg-white text-gray-800"} ref={sectionContent}>
             <AnimatedDiv className={"md:grid md:grid-cols-2 gap-4"}>
-                <div className={"mb-8"}>
-                    <h1 className={"section-title mb-8 text-secondary"}>About Me</h1>
+                <Section title={"About Me"} className={"mb-8"}>
                     <p>Detail-oriented and analytical Software Developer with extensive
                         experience in designing and implementing scalable, robust, and
-                        efficient backend systems. Proficient in backend development with an understanding of front-end
+                        efficient backend systems. Proficient in backend development with an understanding of
+                        front-end
                         technologies. Expertise in developing
                         robust and scalable applications using cutting-edge technologies as well as troubleshooting,
                         debugging, and optimising code for
-                        maximum performance. Ability to analyse end-user needs and tailor solutions to enhance system
+                        maximum performance. Ability to analyse end-user needs and tailor solutions to enhance
+                        system
                         functionality. Committed to staying
                         updated with the latest technologies and best practices in software development to deliver
                         innovative solutions. Eager to leverage solid
-                        technical acumen and a collaborative mindset in contributing to dynamic development teams.</p>
-                </div>
-                <div className={"mb-8"}>
-                    <h1 className={"section-title mb-8 text-secondary"}>Work Experience</h1>
-                    <div>
-                        {workExperience.map((workExperience, index) => (
-                            <motion.div key={`workExperience_${index}`} variants={experienceBoxAnimationVariants} initial={"initial"} whileInView={"visible"}>
-                                <ExperienceBox
-                                    title={workExperience.title}
-                                    date={workExperience.date}
-                                    description={workExperience.description}
-                                    skills={workExperience.skills}
-                                    url={workExperience.url}/>
-                            </motion.div>))
-                        }
-                    </div>
-                </div>
+                        technical acumen and a collaborative mindset in contributing to dynamic development
+                        teams.</p>
+                </Section>
+                <Section title={"Work Experience"} className={"mb-8"}>
+                    {workExperience.map((workExperience, index) => (
+                        <motion.div key={`workExperience_${index}`} variants={experienceBoxAnimationVariants}
+                                    initial={"initial"} whileInView={"visible"}>
+                            <ExperienceBox
+                                title={workExperience.title}
+                                date={workExperience.date}
+                                description={workExperience.description}
+                                skills={workExperience.skills}
+                                url={workExperience.url}/>
+                        </motion.div>))
+                    }
+                </Section>
             </AnimatedDiv>
             <AnimatedDiv className={"mb-8 col-span-2"}>
-                <h1 className={"section-title mb-8 text-secondary"}>My Skills</h1>
-                <div>
+                <Section title={"My Skills"} className={"mb-8"}>
                     {skills.map((skill: Skill, skill_index: number) => (
                             <div key={`skill_${skill_index}`}>
                                 <span className={'text-sm font-bold'}>{skill.category.title}</span>
@@ -110,7 +116,23 @@ export default function HomePage() {
                             </div>
                         )
                     )}
-                </div>
+                </Section>
+            </AnimatedDiv>
+            <AnimatedDiv className={"mb-8 col-span-2"}>
+                <Section title={"Projects"} className={"mb-8"}>
+                    <div className={"grid grid-cols-2 md:grid-cols-3 gap-4"}>
+                        {
+                            projects.map((project: CardItem, index: number) => (
+                                <Link scroll={false} href={`/projects/${project.id}`} key={`project_${index}`}>
+                                    <motion.div layoutId={`project_motion_${project.id}`}>
+                                        <ImageItem key={`project_${index}`} imageUrl={project.icon}
+                                                   title={project.title}/>
+                                    </motion.div>
+                                </Link>
+                            ))
+                        }
+                    </div>
+                </Section>
             </AnimatedDiv>
         </div>
     </>

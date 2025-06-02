@@ -2,7 +2,7 @@
   "result": [
     {
       "id": "1",
-      "icon": "/wherever_app/4.jpg",
+      "icon": "/wherever_app/icon.png",
       "description": "A location-based social interaction platform designed to share updates, interact with posts, and explore nearby places. The app integrates Google Maps and offers a smooth and user-friendly experience.",
       "title": "Wherever App",
       "createdAt": "2022-10-03T00:00:00+00:00",
