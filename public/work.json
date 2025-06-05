@@ -11,8 +11,8 @@
       "url": "https://www.ey.com/",
       "title": "Software Developer . Ernst & Young Mtel, Hong Kong",
       "date": "Aug 2018 - Oct 2022",
-      "skills": ["Node.JS", "PHP", "HTML", "Jquery", "Javascript","Typescript", "Java","Kotlin", "Python", "CSS","GraphQL","MySQL","MongoDB"],
-      "description": "Delivered robust backend solutions for projects, employing Node.js, PHP frameworks to drive project success. Developed and implemented CMS and web portal projects, utilizing JavaScript, jQuery, and HTML for frontend development to enhance user experience and engagement."
+      "skills": ["Node.JS", "PHP", "HTML", "Jquery", "Javascript","Typescript", "Java","Kotlin", "Python", "CSS","GraphQL","MySQL","MongoDB","React"],
+      "description": "Delivered robust backend solutions for projects, employing Node.js, PHP frameworks to drive project success. Developed and implemented CMS and web portal projects, utilizing React, JavaScript, jQuery, and HTML for frontend development to enhance user experience and engagement."
     }
   ]
 }
