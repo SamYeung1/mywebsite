@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import {ProductCard} from "@/app/components/product-card";
 import Link from "next/link";
 import {motion, Variants} from "framer-motion";
+import ImageItem from "@/app/components/image-item";
 
 const cardVariants: Variants = {
     initial: {scale: 0.96, opacity: 0},
@@ -30,11 +31,11 @@ export default function MyProjectPage() {
     }, []);
     return <div className={'grid grid-cols-1 md:grid-cols-3 gap-4'}>
         {
-            productItems.map((card: CardItem, index: number) => (
-                <motion.div variants={cardVariants} key={`production-card_${index}`}>
-                    <Link shallow={false} scroll={false} href={`my_project/${card.id}`}><ProductCard
-                        cardItem={card}/></Link>
-                </motion.div>))
+            productItems.map((project: CardItem, index: number) => (
+                <Link scroll={false} href={`/projects/${project.id}`} key={`project_${index}`}>
+                    <ImageItem key={`project_${index}`} imageUrl={project.icon}
+                               title={project.title}/>
+                </Link>))
         }
     </div>
 }

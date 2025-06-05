@@ -124,10 +124,8 @@ export default function HomePage() {
                         {
                             projects.map((project: CardItem, index: number) => (
                                 <Link scroll={false} href={`/projects/${project.id}`} key={`project_${index}`}>
-                                    <motion.div layoutId={`project_motion_${project.id}`}>
-                                        <ImageItem key={`project_${index}`} imageUrl={project.icon}
-                                                   title={project.title}/>
-                                    </motion.div>
+                                    <ImageItem key={`project_${index}`} imageUrl={project.icon}
+                                               title={project.title}/>
                                 </Link>
                             ))
                         }

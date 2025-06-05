@@ -31,7 +31,7 @@ export default function ImageItem({imageUrl, title}: ImageItemProp) {
         <img draggable={false} src={imageUrl} className={"w-full absolute top-2/4 -translate-y-2/4"}/>
         <motion.div variants={animationVariant} initial={"hidden"} animate={controls}
                     className={"bg-black/50 text-white absolute top-0 w-full h-full flex items-center justify-center"}>
-            <span className={"section-title"}>{title}</span>
+            <span className={"text-xl font-bold"}>{title}</span>
         </motion.div>
     </div>
 

@@ -12,7 +12,7 @@ export default function Header({showBanner}: { showBanner: boolean }) {
             className={`backdrop-blur-sm backdrop-brightness-50 fixed ${showBanner ? (scrolled ? 'bg-primary' : '') : 'bg-primary'}`}
             menuItems={[
                 {name: 'Home', url: '/'},
-                {name: 'My Project', url: '/my_project'}
+                {name: 'My Project', url: '/projects'}
             ]}/>
     </header>
 }

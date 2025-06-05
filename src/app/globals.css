@@ -25,7 +25,7 @@ body {
   /*  )*/
   /*  rgb(var(--background-start-rgb));*/
   /*  color:theme('colors.secondary');*/
-    background-color: theme('colors.primary');
+    background-color: theme('colors.gray.100');
     cursor: default;
 }
 .btn-secondary {
