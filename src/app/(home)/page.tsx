@@ -45,7 +45,7 @@ export default function HomePage() {
                         expertise in software development. Proficient in modern programming languages and frameworks,
                         with a
                         strong focus on Node.js, PHP, and TypeScript. Skilled in designing robust API structures,
-                        optimizing
+                        optimising
                         database performance, and delivering innovative, scalable solutions that enhance operational
                         efficiency.</p>
                     <div className={"flex flex-col md:flex-row items-center md:justify-start gap-4"}>

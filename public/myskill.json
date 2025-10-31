@@ -102,7 +102,9 @@
         "Design Pattern",
         "Object-Oriented Programming",
         "Terraform",
-        "ElasticSearch"
+        "ElasticSearch",
+        "Ansible",
+        "Vault"
       ]
     }
   ]

@@ -3,13 +3,14 @@ import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import React from "react";
 import Footer from "@/app/components/layout/footer";
-import {AnimatePresence} from "framer-motion";
+import PageTransitionEffect from "@/app/components/frozen-router";
+
 const inter = Inter({subsets: ['latin']})
 
 export const metadata: Metadata = {
     title: 'Sam Yeung',
     description: 'Sam Yeung Personal Website',
-    keywords: ['Sam Yeung', 'Software', 'Software Developer','Software Engineer','FullStack Developer','Developer'],
+    keywords: ['Sam Yeung', 'Software', 'Software Developer', 'Software Engineer', 'FullStack Developer', 'Developer'],
 }
 
 export default function RootLayout({
@@ -20,8 +21,10 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        {children}
-        <Footer/>
+        <PageTransitionEffect>
+            {children}
+            <Footer/>
+        </PageTransitionEffect>
         </body>
         </html>
     )

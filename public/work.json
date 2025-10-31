@@ -1,6 +1,13 @@
 {
   "result": [
     {
+      "url": "https://www.wipro.com/",
+      "title": "Software Developer for HSBC (via Wipro) - Contract . London, UK",
+      "date": "July 2025 - Present",
+      "skills": ["Node.JS","Ansible","Vault", "Angular"],
+      "description": "Capitalise on blend of technical and analytical competencies to contribute to complex software development initiatives within HSBC’s infrastructure environment. Boost DevOps efficiency by collaborating with Ansible automation team to integrate credential retrieval seamlessly into automated workflows. Advance overall cross-team productivity through joint development efforts with application and automation teams to streamline secure data access processes."
+    },
+    {
       "url": "https://www.ey.com/",
       "title": "Senior Software Developer . Ernst & Young Mtel, Hong Kong",
       "date": "Oct 2022 - Feb 2025",
@@ -11,8 +18,8 @@
       "url": "https://www.ey.com/",
       "title": "Software Developer . Ernst & Young Mtel, Hong Kong",
       "date": "Aug 2018 - Oct 2022",
-      "skills": ["Node.JS", "PHP", "HTML", "Jquery", "Javascript","Typescript", "Java","Kotlin", "Python", "CSS","GraphQL","MySQL","MongoDB","React"],
-      "description": "Delivered robust backend solutions for projects, employing Node.js, PHP frameworks to drive project success. Developed and implemented CMS and web portal projects, utilizing React, JavaScript, jQuery, and HTML for frontend development to enhance user experience and engagement."
+      "skills": ["Node.JS", "PHP", "HTML", "Jquery", "Javascript","Typescript", "Java","Kotlin", "Python", "CSS","GraphQL","MySQL","MongoDB"],
+      "description": "Delivered robust backend solutions for projects, employing Node.js, PHP frameworks to drive project success. Developed and implemented CMS and web portal projects, utilizing JavaScript, jQuery, and HTML for frontend development to enhance user experience and engagement."
     }
   ]
 }
