@@ -9,11 +9,11 @@ export function ExperienceBox({
                                   skills,
                                   url
                               }: Experience) {
-    return <div className={'flex justify-between'}>
-        <span className={'mr-8 w-52 font-light'}>{date}</span>
-        <div className={'flex flex-col text-left w-full'}>
-            <a className={'font-bold'} href={url} target={'_blank'}>{title}<LinkSvg/></a>
-            <span className={'font-light'}>
+    return <div className={'flex justify-between md:flex-row flex-col'}>
+        <span className={'mr-8 w-52 font-light md:my-0 my-1'}>{date}</span>
+        <div className={'flex flex-col w-full'}>
+            <a className={'font-bold text-left md:my-0 my-1'} href={url} target={'_blank'}>{title}<LinkSvg/></a>
+            <span className={'font-light text-justify'}>
                                    {description}
                                 </span>
             <div className={'py-4 flex flex-wrap gap-2'}>
