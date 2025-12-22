@@ -1,5 +1,5 @@
 import React, {useContext, useRef} from "react";
-import {LayoutRouterContext} from "next/dist/shared/lib/app-router-context";
+import {LayoutRouterContext} from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 export default function FrozenRouter({
                                          children,

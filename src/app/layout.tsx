@@ -3,6 +3,7 @@ import type {Metadata} from 'next'
 import {Inter} from 'next/font/google'
 import React from "react";
 import Footer from "@/app/components/layout/footer";
+import PageTransitionEffect from "@/app/components/frozen-router";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -20,8 +21,10 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={inter.className}>
-        {children}
-        <Footer/>
+        <PageTransitionEffect>
+            {children}
+            <Footer/>
+        </PageTransitionEffect>
         </body>
         </html>
     )
