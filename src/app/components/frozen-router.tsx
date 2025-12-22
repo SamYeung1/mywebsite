@@ -1,7 +1,7 @@
 "use client";
 import {AnimatePresence, motion, Variants} from "framer-motion";
 import {ReactNode, useContext, useRef} from "react";
-import {LayoutRouterContext} from "next/dist/shared/lib/app-router-context";
+import {LayoutRouterContext} from "next/dist/shared/lib/app-router-context.shared-runtime";
 import {usePathname} from "next/navigation";
 
 const variants: Variants = {
@@ -20,7 +20,7 @@ const variants: Variants = {
 }
 const PageTransitionEffect = ({children}: { children: ReactNode }) => {
     const key = usePathname();
-    return (<AnimatePresence mode={"wait"}>
+    return (<AnimatePresence mode={"popLayout"}>
         <motion.div key={key} variants={variants} initial={"initial"} animate={"enter"} exit={"exit"} transition={{duration:1}}>
             <FrozenRouter>{children}</FrozenRouter>
         </motion.div>
