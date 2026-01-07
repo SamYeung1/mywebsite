@@ -12,14 +12,14 @@
       "title": "Senior Software Developer . Ernst & Young Mtel, Hong Kong",
       "date": "Oct 2022 - Feb 2025",
       "skills": [],
-      "description": "Achieved seamless functionality across projects by developing backend solutions and conducting thorough code reviews utilizing NodeJS, PHP frameworks. Architect scalable APIs, streamlining development processes and enhancing project efficiency."
+      "description": "Delivered backend and API development across multiple enterprise projects. Engineered and deployed scalable backend architecture for over 10 projects using Node.js (Typescript, JS) frameworks and PHP frameworks, facilitating seamless functionality and system reliability.Architected APIs, database schemas, and workflows to address bottlenecks and optimise throughput. Implemented CMS platforms and custom APIs, advancing content efficiency and improving end-user accessibility. Elevated team-wide code quality by\nadvocating for clean coding standards and collaborative development, while providing technical guidance to junior team members on complex implementations."
     },
     {
       "url": "https://www.ey.com/",
       "title": "Software Developer . Ernst & Young Mtel, Hong Kong",
       "date": "Aug 2018 - Oct 2022",
       "skills": ["Node.JS", "PHP", "HTML", "Jquery", "Javascript","Typescript", "Java","Kotlin", "Python", "CSS","GraphQL","MySQL","MongoDB"],
-      "description": "Delivered robust backend solutions for projects, employing Node.js, PHP frameworks to drive project success. Developed and implemented CMS and web portal projects, utilizing JavaScript, jQuery, and HTML for frontend development to enhance user experience and engagement."
+      "description": "Delivered full-stack and backend solutions across diverse client projects, applying strong technical acumen and secure development practices. Utilised Docker for application testing, packaging, and deployment, with key focus on ensuring consistency and reducing environment-related issues. Partnered with project managers, UX designers, developers, and QA teams to deliver tailored solutions."
     }
   ]
 }
